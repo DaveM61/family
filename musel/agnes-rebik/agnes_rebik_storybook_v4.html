@@ -100,6 +100,18 @@
 
   /* AT A GLANCE */
   .at-a-glance { max-width: var(--max-width); margin: 5rem auto; padding: 0 2rem; }
+
+  /* ── Table of Contents ── */
+  .toc { max-width: var(--max-width); margin: 5rem auto; padding: 0 2rem; }
+  .toc-list { list-style: none; padding: 0; counter-reset: toc-counter; }
+  .toc-list li { counter-increment: toc-counter; display: flex; align-items: baseline; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 0.5px solid var(--light-rule); }
+  .toc-list li::before { content: counter(toc-counter, upper-roman); font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--muted-brown); letter-spacing: 0.1em; min-width: 2.5rem; }
+  .toc-list a { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--brown); text-decoration: none; }
+  .toc-list a:hover { color: var(--gold); }
+
+  /* ── Back to top ── */
+  .back-to-top { display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-brown); text-decoration: none; margin-top: 0.4rem; margin-bottom: 1.5rem; }
+  .back-to-top:hover { color: var(--gold); }
   .section-label {
     font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em;
     color: var(--muted-brown); text-transform: uppercase; margin-bottom: 2rem;
@@ -344,14 +356,20 @@
     color: #1C1A16;
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
-    padding: 20px 2rem;
-    text-align: center;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .dnm-footer em {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 15px;
   }
+  .dnm-footer a { color: #1C1A16; text-decoration: none; }
+  .dnm-footer-right { font-size: 11px; }
 </style>
 </head>
 <body>
@@ -368,7 +386,7 @@
 
 
 <!-- COVER -->
-<div class="cover">
+<div class="cover" id="top">
   <p class="cover-eyebrow">A Life Well Lived</p>
   <div class="cover-rule-top"></div>
   <p class="cover-title-small">The Story of</p>
@@ -383,50 +401,21 @@
 </div>
 
 <!-- AT A GLANCE -->
-<div class="at-a-glance">
-  <div class="section-label">At a Glance</div>
-  <div class="glance-grid">
-    <div class="glance-item">
-      <div class="glance-label">Born</div>
-      <div class="glance-value">September 20, 1907<br>York Township, Tama County, Iowa</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Maiden Name</div>
-      <div class="glance-value">Agnes Mary Shanda</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Parents</div>
-      <div class="glance-value">Frank Shanda Jr. (1876–1958)<br>Anna Babor Shanda (1875–1954)</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Siblings</div>
-      <div class="glance-value">Brother Joe (6 years older)<br>Brother Emil (8 years younger)</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Married</div>
-      <div class="glance-value">Milo Rebik, September 2, 1924<br>St. Mary's Church, Vining, Iowa</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Children</div>
-      <div class="glance-value">Arlene (b. 1925), Lawrence (b. 1928), Hubert (b. 1931)</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Faith</div>
-      <div class="glance-value">Catholic</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Heritage</div>
-      <div class="glance-value">Czech-American</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Hobbies</div>
-      <div class="glance-value">Crocheting, reading, dancing, gardening</div>
-    </div>
-    <div class="glance-item">
-      <div class="glance-label">Community</div>
-      <div class="glance-value">Charter Member, Eagles Auxiliary<br>Tama-Toledo</div>
-    </div>
-  </div>
+<div class="toc" id="toc">
+  <div class="section-label">Contents</div>
+  <ol class="toc-list">
+    <li><a href="#ch-before-agnes">Before Agnes: Where They Came From</a></li>
+    <li><a href="#ch-roots">Roots in the Iowa Prairie</a></li>
+    <li><a href="#ch-schoolgirl">A Schoolgirl's World</a></li>
+    <li><a href="#ch-farm-life">The Life of the Farm</a></li>
+    <li><a href="#ch-milo">Milo</a></li>
+    <li><a href="#ch-making-home">Making a Home</a></li>
+    <li><a href="#ch-town-life">Town Life and Working Years</a></li>
+    <li><a href="#ch-language">The Language She Carried</a></li>
+    <li><a href="#ch-own-words">A Life in Her Own Words</a></li>
+    <li><a href="#ch-remember">As We Remember Her</a></li>
+    <li><a href="#ch-sources">Sources</a></li>
+  </ol>
 </div>
 
 <!-- CONTENT -->
@@ -435,7 +424,8 @@
   <!-- PROLOGUE -->
   <div class="chapter">
     <div class="chapter-number">Prologue</div>
-    <h2 class="chapter-title">Before Agnes: Where They Came From</h2>
+    <h2 class="chapter-title" id="ch-before-agnes">Before Agnes: Where They Came From</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>The story of Agnes Rebik does not begin in Iowa. It begins in Bohemia.</p>
 
@@ -471,7 +461,8 @@
   <!-- CHAPTER ONE -->
   <div class="chapter">
     <div class="chapter-number">Chapter One</div>
-    <h2 class="chapter-title">Roots in the Iowa Prairie</h2>
+    <h2 class="chapter-title" id="ch-roots">Roots in the Iowa Prairie</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes Mary Shanda came into the world on September 20, 1907, in a two-room farmhouse nestled on a hilly, timbered stretch of land in York Township, Tama County, Iowa. Her parents, Frank and Anna Babor Shanda, had married on October 1, 1900, and worked their way from a rented life near Irving to a 75-acre farm they could finally call their own — land Frank had cleared, fenced, and built upon board by board. The doctor who attended Agnes's birth, a young physician named Dr. Pace who came out from Elberon by horse and buggy, would become a familiar name in her memory.</p>
 
@@ -506,7 +497,8 @@
   <!-- CHAPTER TWO -->
   <div class="chapter">
     <div class="chapter-number">Chapter Two</div>
-    <h2 class="chapter-title">A Schoolgirl's World</h2>
+    <h2 class="chapter-title" id="ch-schoolgirl">A Schoolgirl's World</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes started school at five years old — no kindergarten in those days — walking with the neighbor children to York School No. 8, about a mile and a half by road, though they almost always cut across the fields to shorten the trip. Her first teacher was a young woman named Libbie Novak. After her came a new face nearly every year, teachers who boarded with families in the neighborhood and made do with a pot-bellied stove in the center of the room and a shared tin cup from which every child drank the water two pupils hauled from a nearby farm.</p>
 
@@ -539,7 +531,8 @@
   <!-- CHAPTER THREE -->
   <div class="chapter">
     <div class="chapter-number">Chapter Three</div>
-    <h2 class="chapter-title">The Life of the Farm</h2>
+    <h2 class="chapter-title" id="ch-farm-life">The Life of the Farm</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Growing up on the Shanda farm meant growing up inside a closed loop of production and consumption that left almost no room for waste. Every season had its demands, and Agnes was part of fulfilling them from an early age. She carried wood, hauled cobs, fed the chickens, and later took up milking.</p>
 
@@ -563,7 +556,8 @@
   <!-- CHAPTER FOUR -->
   <div class="chapter">
     <div class="chapter-number">Chapter Four</div>
-    <h2 class="chapter-title">Milo</h2>
+    <h2 class="chapter-title" id="ch-milo">Milo</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes met her future husband, Milo Rebik, at a neighborhood barn dance. She was fourteen years old. The first date was a party, and Milo drove a Model T touring car. He was the one who proposed. Their courtship lasted two years before they married on September 2, 1924, at St. Mary's Church in Vining, Iowa. There was no honeymoon — they simply went home.</p>
 
@@ -594,7 +588,8 @@
   <!-- CHAPTER FIVE -->
   <div class="chapter">
     <div class="chapter-number">Chapter Five</div>
-    <h2 class="chapter-title">Making a Home</h2>
+    <h2 class="chapter-title" id="ch-making-home">Making a Home</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes baked bread three times a week when the children were at home. Flour came in fifty-pound cloth sacks; when the sacks were empty, she washed and bleached them and made them into dish towels and clothing. She baked kolaches and rolls alongside the bread, canned vegetables from her garden every summer, shocked oats in the field alongside Milo, husked corn by hand until a picker arrived on the farm, and cooked for threshers during harvest season.</p>
 
@@ -622,7 +617,8 @@
   <!-- CHAPTER SIX -->
   <div class="chapter">
     <div class="chapter-number">Chapter Six</div>
-    <h2 class="chapter-title">Town Life and Working Years</h2>
+    <h2 class="chapter-title" id="ch-town-life">Town Life and Working Years</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>The years 1958 and 1959 arrived together like a closing door. In January of 1958, Agnes's father Frank Shanda died at a convalescent home in Cedar Falls — services were held at St. Mary's Church in Vining, the same church where Agnes and Milo had married thirty-four years before. He was 81 years old, and had farmed the Tama County land for most of his life. Then, in May of 1959, Milo's father Michael Rebik died at Milo and Agnes's home on Pershing Street in Tama, where he had been living with them. Michael was 88. He had outlived his wife Josephine by nearly five years. Within weeks of his passing, Milo and Agnes held a farm sale. Agnes was fifty-one years old.</p>
 
@@ -664,7 +660,8 @@
   <!-- CHAPTER SEVEN -->
   <div class="chapter">
     <div class="chapter-number">Chapter Seven</div>
-    <h2 class="chapter-title">The Language She Carried</h2>
+    <h2 class="chapter-title" id="ch-language">The Language She Carried</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Czech was the language of Agnes's childhood. Every neighbor for miles around the Shanda farm was Czech, and so was every song at the feather bees, every greeting across a fence, every conversation at the kitchen table. Agnes spoke it at home, could read it, but — as she noted with a touch of regret — never really learned to write it properly. It was a living language, passed through the air rather than the page.</p>
 
@@ -676,7 +673,8 @@
   <!-- CHAPTER EIGHT -->
   <div class="chapter">
     <div class="chapter-number">Chapter Eight</div>
-    <h2 class="chapter-title">A Life in Her Own Words</h2>
+    <h2 class="chapter-title" id="ch-own-words">A Life in Her Own Words</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes wrote two extended recollections of her life — one in August 1980, when she was seventy-two, and one in October 1990, at eighty-three. She also left behind personal biographical notes dated May 15, 1989, and answered a grandchild's school interview questions with characteristic directness: favorite color? "Any color." Favorite food? "Any foods." What did she want to be when she grew up? "Housewife." She had been one, and she made no apologies for it.</p>
 
@@ -695,7 +693,8 @@
   <!-- CHAPTER NINE -->
   <div class="chapter">
     <div class="chapter-number">Chapter Nine</div>
-    <h2 class="chapter-title">As We Remember Her</h2>
+    <h2 class="chapter-title" id="ch-remember">As We Remember Her</h2>
+    <a href="#toc" class="back-to-top">↑ Back to top</a>
 
     <p>Agnes left behind two written recollections of her own life, and they are precise and generous — full of the smell of rendering lard, the sound of Czech songs at feather bees, the pleasure of a garden coming in. But there is a portion of her life she could not write, because it belongs not to her but to the people who came after her: the grandchildren who sat beside her on the sofa, the great-grandchildren who played at her feet. What follows is what they remember.</p>
 
@@ -800,7 +799,8 @@
 
 <!-- SOURCES -->
 <div class="sources">
-  <h2>Sources</h2>
+  <h2 id="ch-sources">Sources</h2>
+  <a href="#toc" class="back-to-top">↑ Back to top</a>
   <h3>Agnes's Own Words</h3>
   <ul>
     <li>Agnes Rebik, handwritten memoir, August 1980. Privately held by the Musel family.</li>
@@ -828,15 +828,12 @@
   <ul>
     <li>Family photograph collection, privately held by the Musel family. Digital scans provided by David F. Musel, March 2026.</li>
   </ul>
-  <h3>To Be Added</h3>
-  <ul>
-    <li>Family Zoom recording — memories of Agnes from her grandchildren (date TBD).</li>
-  </ul>
 </div>
 
 
 <footer class="dnm-footer">
-  dave&amp;mike &nbsp;&middot;&nbsp; <em>esperienze</em> &nbsp;&middot;&nbsp; family
+  <div><a href="https://daveandmike.net">dave&amp;mike</a> &nbsp;&middot;&nbsp; <em><a href="https://daveandmike.net/index.html">esperienze</a></em> &nbsp;&middot;&nbsp; <a href="../../index.html">family</a></div>
+  <div class="dnm-footer-right"><a href="mailto:services@musel.us">Contact Dave &amp; Mike</a></div>
 </footer>
 
 <script>
@@ -846,6 +843,7 @@
     var header = document.querySelector('.dnm-header');
     var offset = (topbar ? topbar.offsetHeight : 12) + (header ? header.offsetHeight : 0);
     document.body.style.paddingTop = offset + 'px';
+    document.documentElement.style.scrollPaddingTop = offset + 'px';
   }
   setBodyOffset();
   window.addEventListener('resize', setBodyOffset);

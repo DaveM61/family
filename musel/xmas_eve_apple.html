@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Musel Family's Christmas Eve Apple — dave&amp;mike · Family</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F0EDE7;
+    --ink: #1a1612;
+    --brown: #5c4a32;
+    --muted-brown: #8a7560;
+    --gold: #b8960c;
+    --light-rule: #ddd4c0;
+    --chapter-accent: #7a3b2e;
+    --max-width: 720px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 18px; }
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── dave&mike brand chrome ── */
+  .dnm-topbar {
+    height: 12px;
+    background: #5E82A0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .dnm-header {
+    background: #F0EDE7;
+    padding: 20px 2rem;
+    position: fixed;
+    top: 12px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .dnm-header > a img { display: block; width: 100px; height: auto; flex-shrink: 0; }
+  .dnm-header-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: #1C1A16;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .dnm-header-text .descriptor {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #7A746C;
+  }
+  .dnm-header-text .descriptor::first-letter {
+    font-size: inherit; float: none; color: inherit;
+    font-family: inherit; font-weight: inherit;
+    line-height: inherit; margin: 0; padding: 0;
+  }
+  .dnm-back {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #5E82A0;
+    text-decoration: none;
+    flex-shrink: 0;
+    align-self: flex-end;
+    padding-bottom: 4px;
+    margin-left: auto;
+  }
+  .dnm-footer {
+    background: #8AAEC8;
+    color: #1C1A16;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .dnm-footer em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; }
+  .dnm-footer a { color: #1C1A16; text-decoration: none; }
+  .dnm-footer-right { font-size: 11px; }
+
+  /* ── Section label (Cinzel eyebrow with trailing rule) ── */
+  .section-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em;
+    color: var(--muted-brown); text-transform: uppercase; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--light-rule); }
+
+  /* ── Title block ── */
+  .title-block {
+    max-width: var(--max-width);
+    margin: 4rem auto 0;
+    padding: 3rem 2rem 2.5rem;
+    border-bottom: 1px solid var(--light-rule);
+  }
+  .eyebrow {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em;
+    color: var(--muted-brown); text-transform: uppercase; margin-bottom: 1rem;
+  }
+  .page-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3rem); color: var(--chapter-accent);
+    line-height: 1.2; margin-bottom: 0.75rem;
+  }
+  .attribution {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.95rem; color: var(--muted-brown);
+  }
+
+  /* ── Main content ── */
+  main { max-width: var(--max-width); margin: 0 auto; padding: 3rem 2rem 6rem; }
+  section { margin-bottom: 4rem; }
+
+  /* ── Section title ── */
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--chapter-accent);
+    line-height: 1.2; margin-bottom: 2rem;
+  }
+
+  /* ── Intro ── */
+  .intro-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.15rem; color: var(--brown); line-height: 1.8;
+    text-align: center;
+    border-top: 1px solid var(--light-rule);
+    border-bottom: 1px solid var(--light-rule);
+    padding: 2rem 0;
+  }
+  .intro-text::first-letter { font-size: inherit; float: none; color: inherit; font-family: inherit; }
+
+  /* ── Prose ── */
+  .prose p { margin-bottom: 1.4em; font-size: 1rem; color: var(--ink); text-align: justify; hyphens: auto; }
+  .prose p:first-of-type::first-letter {
+    font-family: 'Cinzel', serif; font-size: 3.5em; float: left;
+    line-height: 0.75; margin-right: 0.08em; margin-top: 0.1em; color: var(--chapter-accent);
+  }
+  .prose strong { font-weight: 600; color: var(--brown); }
+
+  /* ── Quote block ── */
+  .quote-block {
+    margin: 2.5rem 0; padding: 1.5rem 2rem;
+    border-left: 3px solid var(--chapter-accent);
+    background: rgba(122,59,46,0.04);
+  }
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 1.05rem; color: var(--brown); margin-bottom: 0.75rem;
+    text-align: left; line-height: 1.75;
+  }
+  .quote-text::first-letter { font-size: inherit; float: none; color: inherit; font-family: inherit; }
+  .quote-attribution {
+    font-family: 'Cormorant Garamond', serif; font-size: 0.82rem;
+    color: var(--muted-brown); font-style: normal;
+  }
+
+  /* ── Finding cards ── */
+  .research-findings {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--light-rule);
+    border: 1px solid var(--light-rule);
+    margin: 2.5rem 0;
+  }
+  .finding-card { background: white; padding: 1.25rem 1.5rem; }
+  .finding-title {
+    font-family: 'Cinzel', serif; font-size: 0.55rem; letter-spacing: 0.3em;
+    color: var(--muted-brown); text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .finding-text { font-size: 0.88rem; color: var(--ink); line-height: 1.65; }
+  .finding-text::first-letter { font-size: inherit; float: none; color: inherit; font-family: inherit; }
+
+  /* ── Story cards ── */
+  .story-card {
+    margin: 1.75rem 0; padding: 1.5rem 1.75rem;
+    background: rgba(92,74,50,0.04);
+    border-left: 3px solid var(--gold);
+  }
+  .story-title {
+    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.3em;
+    color: var(--muted-brown); text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .story-text { font-size: 0.95rem; color: var(--ink); line-height: 1.75; text-align: justify; hyphens: auto; }
+  .story-text::first-letter { font-size: inherit; float: none; color: inherit; font-family: inherit; }
+  .story-text strong { font-weight: 600; color: var(--brown); }
+
+  /* ── Divider ── */
+  .divider { border: none; border-top: 1px solid var(--light-rule); margin: 3rem 0; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .research-findings { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="dnm-topbar"></div>
+<div class="dnm-header">
+  <a href="https://daveandmike.net"><img src="../assets/dnm_logo.svg" alt="dave&amp;mike"></a>
+  <div class="dnm-header-text">
+    <h1>Family</h1>
+    <p class="descriptor">Stories, history &amp; the people we love</p>
+  </div>
+  <a href="../index.html" class="dnm-back">← Family</a>
+</div>
+
+<!-- TITLE BLOCK -->
+<div class="title-block">
+  <div class="eyebrow">Family Tradition</div>
+  <h1 class="page-title">The Musel Family's Christmas Eve Apple</h1>
+  <p class="attribution">A Bohemian tradition &bull; preserved by the Musel family since 1851</p>
+</div>
+
+<main>
+
+  <!-- INTRO SECTION -->
+  <section class="intro-section">
+    <p class="intro-text">
+      After Christmas Eve supper, an apple is sliced into pieces equal to the number of people at the table. Each person takes a slice, and the host shares an ancient promise: if anyone finds themselves lost, they need only remember eating the apple together, and they will find their way home.
+    </p>
+  </section>
+
+  <!-- HISTORICAL VALIDATION -->
+  <section class="research-section">
+    <div class="section-label">Research validation</div>
+    <h2 class="section-title">An authentic Bohemian tradition</h2>
+
+    <div class="quote-block">
+      <p class="quote-text">
+        &ldquo;The head of the family would cut an apple into as many pieces as there were people around the table and handed them out to each and every one of them. They would then eat their part of the apple. They believed that if they lost their way somewhere away from home in the next year, all they needed to do was to remember all the other people who were sharing the Christmas Eve dinner with them and they would find the way home.&rdquo;
+      </p>
+      <p class="quote-attribution">Radio Prague International &mdash; Christmas in the Bohemian-Moravian Highlands</p>
+    </div>
+
+    <div class="research-findings">
+      <div class="finding-card">
+        <div class="finding-title">Geographic Match</div>
+        <div class="finding-text">The tradition is documented specifically in the Bohemian-Moravian Highlands&mdash;exactly the region where Matej Musel and his family originated before immigrating to America in 1851.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-title">Distinct from Fortune-Telling</div>
+        <div class="finding-text">While most Czech Christmas apple traditions focus on cutting apples to reveal star patterns for fortune-telling, the Musel tradition is about family bonds and spiritual guidance home.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-title">Preserved Through Migration</div>
+        <div class="finding-text">Evidence suggests Matej brought this tradition to Iowa, where it was maintained by scattered family branches across Minnesota and Iowa for over 170 years.</div>
+      </div>
+      <div class="finding-card">
+        <div class="finding-title">Living Heritage</div>
+        <div class="finding-text">Czech sources confirm these customs &ldquo;remained deeply rooted well into the 20th century and are still observed by some families today&rdquo;&mdash;exactly matching the Musel family experience.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- FAMILY ORIGINS -->
+  <section class="stories-section">
+    <div class="section-label">Origins</div>
+    <h2 class="section-title">The Musel family connection</h2>
+
+    <div class="prose">
+      <p>This tradition originates from <strong>Bohemia-Moravia</strong>, which encompasses most of the current Czech Republic. <strong>Matej Musel</strong> (born 1804, died 1898) was the patriarch who brought this tradition to America when his family immigrated in 1851.</p>
+
+      <p>During genealogy research in the late 1970s and early 1980s, David Musel discovered descendants of one of Matej&rsquo;s sons in northern Minnesota. When asked about the Christmas Eve Apple tradition, a family member recalled participating as a child, though they had not observed it in recent years&mdash;confirming the tradition&rsquo;s presence in multiple branches of the immigrated family.</p>
+    </div>
+  </section>
+
+  <!-- STORIES OF IT WORKING -->
+  <section class="stories-section">
+    <div class="section-label">It works</div>
+    <h2 class="section-title">Stories of finding the way home</h2>
+
+    <div class="story-card">
+      <div class="story-title">Lost on the Iowa Prairie (1850s)</div>
+      <div class="story-text">
+        Shortly after Matej Musel&rsquo;s family settled northwest of Chelsea, Iowa, one of the younger sons became lost on the winter prairies. As panic set in, <strong>he remembered the Christmas Eve apple tradition</strong>. He sat down, thought about the last time he shared the apple with his family, and was able to find his way home safely.
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title">Lost While Hunting in Maine (Early 1970s)</div>
+      <div class="story-text">
+        Carol (Musel) Petersen and her husband Rick were living in Maine while Rick served in the U.S. Navy. During a deer hunting trip, Rick became physically lost in the Maine woods and started to worry he wouldn&rsquo;t find his way out. <strong>He remembered the last time he shared the apple tradition</strong> in the basement of Fred Musel&rsquo;s home during Christmas Eve supper. His mind cleared, and he was able to navigate out of the forest.
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+</main>
+
+<footer class="dnm-footer">
+  <div><a href="https://daveandmike.net">dave&amp;mike</a> &nbsp;&middot;&nbsp; <em><a href="https://daveandmike.net/index.html">esperienze</a></em> &nbsp;&middot;&nbsp; <a href="../index.html">family</a></div>
+  <div class="dnm-footer-right"><a href="mailto:services@musel.us">Contact Dave &amp; Mike</a></div>
+</footer>
+
+<script>
+  function setBodyOffset() {
+    var topbar = document.querySelector('.dnm-topbar');
+    var header = document.querySelector('.dnm-header');
+    var offset = (topbar ? topbar.offsetHeight : 12) + (header ? header.offsetHeight : 0);
+    document.body.style.paddingTop = offset + 'px';
+    document.documentElement.style.scrollPaddingTop = offset + 'px';
+  }
+  setBodyOffset();
+  window.addEventListener('resize', setBodyOffset);
+</script>
+</body>
+</html>
