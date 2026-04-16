@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Life Well Lived — The Story of Agnes Rebik</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #f9f5ee;
+    --cream: #F0EDE7;
     --ink: #1a1612;
     --brown: #5c4a32;
     --muted-brown: #8a7560;
@@ -277,9 +277,94 @@
     margin: 2.5rem 0 1.2rem;
   }
 
+
+  /* ── dave&mike brand chrome ── */
+  .dnm-topbar {
+    height: 12px;
+    background: #5E82A0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .dnm-header {
+    background: #F0EDE7;
+    padding: 20px 2rem;
+    position: fixed;
+    top: 12px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .dnm-back {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #5E82A0;
+    text-decoration: none;
+    flex-shrink: 0;
+    align-self: flex-end;
+    padding-bottom: 4px;
+    margin-left: auto;
+  }
+  .dnm-header a img {
+    display: block;
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .dnm-header-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.8rem;
+    color: #1C1A16;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .dnm-header-text .descriptor {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #7A746C;
+  }
+  .dnm-header-text .descriptor::first-letter {
+    font-size: inherit;
+    float: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  .dnm-footer {
+    background: #8AAEC8;
+    color: #1C1A16;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    padding: 20px 2rem;
+    text-align: center;
+  }
+  .dnm-footer em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+  }
 </style>
 </head>
 <body>
+
+<div class="dnm-topbar"></div>
+<div class="dnm-header">
+  <a href="https://daveandmike.net"><img src="../../assets/dnm_logo.svg" alt="dave&amp;mike"></a>
+  <div class="dnm-header-text">
+    <h1>Family</h1>
+    <p class="descriptor">Stories, history &amp; the people we love</p>
+  </div>
+  <a href="../../index.html" class="dnm-back">← Family</a>
+</div>
 
 
 <!-- COVER -->
@@ -749,5 +834,21 @@
   </ul>
 </div>
 
+
+<footer class="dnm-footer">
+  dave&amp;mike &nbsp;&middot;&nbsp; <em>esperienze</em> &nbsp;&middot;&nbsp; family
+</footer>
+
+<script>
+  // Push body content below fixed header (slate bar + logo header)
+  function setBodyOffset() {
+    var topbar = document.querySelector('.dnm-topbar');
+    var header = document.querySelector('.dnm-header');
+    var offset = (topbar ? topbar.offsetHeight : 12) + (header ? header.offsetHeight : 0);
+    document.body.style.paddingTop = offset + 'px';
+  }
+  setBodyOffset();
+  window.addEventListener('resize', setBodyOffset);
+</script>
 </body>
 </html>
