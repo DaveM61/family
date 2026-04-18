@@ -45,8 +45,26 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    overflow: hidden;
   }
-  .dnm-header > a img { display: block; width: 100px; height: auto; flex-shrink: 0; }
+  .dnm-header > a { position: relative; z-index: 2; flex-shrink: 0; }
+  .dnm-header > a img { display: block; width: 100px; height: auto; }
+  .dnm-header-text { position: relative; z-index: 2; }
+  .dnm-header-img-zone {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0%, transparent 15%, black 38%, black 100%);
+    mask-image: linear-gradient(to right,
+      transparent 0%, transparent 15%, black 38%, black 100%);
+  }
+  .dnm-header-img-zone img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 40%;
+    display: block;
+  }
   .dnm-header-text h1 {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -217,6 +235,9 @@
     <p class="descriptor">Stories, history &amp; the people we love</p>
   </div>
   <a href="../index.html" class="dnm-back">← Family</a>
+  <div class="dnm-header-img-zone">
+    <img src="../assets/family_header.png" alt="">
+  </div>
 </div>
 
 <!-- TITLE BLOCK -->
