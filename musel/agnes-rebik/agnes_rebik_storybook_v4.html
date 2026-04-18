@@ -388,6 +388,15 @@
   }
   .dnm-footer a { color: #1C1A16; text-decoration: none; }
   .dnm-footer-right { font-size: 11px; }
+
+  @media (max-width: 600px) {
+    .dnm-header-img-zone {
+      -webkit-mask-image: linear-gradient(to right,
+        transparent 0%, transparent 55%, black 75%, black 100%);
+      mask-image: linear-gradient(to right,
+        transparent 0%, transparent 55%, black 75%, black 100%);
+    }
+  }
 </style>
 </head>
 <body>
