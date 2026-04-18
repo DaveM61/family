@@ -46,7 +46,7 @@
       background: var(--bg);
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       padding: 12px var(--h-pad);
       flex-shrink: 0;
       position: relative;
@@ -81,14 +81,14 @@
       overflow: hidden;
       -webkit-mask-image: linear-gradient(to right,
         transparent 0%,
-        transparent 9%,
-        black 20%,
+        transparent 15%,
+        black 38%,
         black 100%
       );
       mask-image: linear-gradient(to right,
         transparent 0%,
-        transparent 9%,
-        black 20%,
+        transparent 15%,
+        black 38%,
         black 100%
       );
     }
@@ -99,6 +99,34 @@
       object-fit: cover;
       object-position: center 40%;
       display: block;
+    }
+
+    /* ── Header title block ── */
+    .header-title-block {
+      position: relative;
+      z-index: 2;
+      margin-left: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header-title-block h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+
+    .header-title-block .descriptor {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 0;
     }
 
     /* ── Back link — slim cream bar below header ── */
@@ -247,6 +275,11 @@
       <img src="assets/dnm_logo.svg" alt="dave&amp;mike">
     </a>
 
+    <div class="header-title-block">
+      <h1>Family</h1>
+      <p class="descriptor">Stories, history &amp; the people we love</p>
+    </div>
+
     <!-- Header image — drop assets/family_header.png in place when ready -->
     <div class="header-img-zone">
       <img src="assets/family_header.png" alt="">
@@ -260,9 +293,6 @@
 
   <main>
     <div class="content">
-      <h1>Family</h1>
-      <p class="descriptor">Stories, history &amp; the people we love</p>
-      <hr class="rule">
       <ul class="link-list">
         <li><a href="musel/agnes-rebik/agnes_rebik_storybook_v4.html">Agnes Rebik Storybook <span class="arrow">→</span></a></li>
         <li><a href="musel/xmas_eve_apple.html">The Musel Family's Christmas Eve Apple <span class="arrow">→</span></a></li>
