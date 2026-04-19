@@ -399,22 +399,6 @@
   }
 
   /* ── PDF download button ── */
-  .pdf-dl-header {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    color: #5E82A0;
-    text-decoration: none;
-    flex-shrink: 0;
-    align-self: flex-end;
-    padding-bottom: 4px;
-    margin-right: 1rem;
-    border: 1px solid #5E82A0;
-    padding: 4px 10px;
-    border-radius: 2px;
-    white-space: nowrap;
-  }
-  .pdf-dl-header:hover { background: #5E82A0; color: #F0EDE7; }
-
   .pdf-dl-cover {
     position: relative; z-index: 1;
     display: inline-block;
@@ -431,7 +415,7 @@
   .pdf-dl-cover:hover { border-color: #b8960c; color: #b8960c; }
 
   @media print {
-    .pdf-dl-header, .pdf-dl-cover { display: none !important; }
+    .pdf-dl-cover { display: none !important; }
   }
 </style>
 </head>
@@ -444,7 +428,6 @@
     <h1>Family</h1>
     <p class="descriptor">Stories, history &amp; the people we love</p>
   </div>
-  <a href="agnes_rebik_storybook.pdf" download class="pdf-dl-header">↓ Download PDF</a>
   <a href="../../index.html" class="dnm-back">← Family</a>
   <div class="dnm-header-img-zone">
     <img src="../../assets/family_header.png" alt="">
